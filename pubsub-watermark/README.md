@@ -32,6 +32,7 @@ Created the topics and subscriptions:
     gcloud pubsub subscriptions create test-10ms --topic=test-10ms --project=$PROJECT
 
 
+# CountPubSub
 
 10000ms test
 
@@ -101,6 +102,8 @@ Created the topics and subscriptions:
      -Pdirect-runner
     python3 src/main/python/publish.py $PROJECT test-10ms --sleep 10 --limit 0 --num_players=10
 
+
+## SuperCountPubSub
 
 Run pipeline that consumes from many topics ta once and computes the lag between pane timestamps and their processing time.
  

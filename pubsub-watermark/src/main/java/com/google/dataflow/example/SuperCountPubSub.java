@@ -80,8 +80,8 @@ public class SuperCountPubSub {
                   event.setPane(paneTimestamp.toString(ISODateTimeFormat.dateTimeNoMillis()));
                   event.setProcessed(
                       processedTimestamp.toString(ISODateTimeFormat.dateTimeNoMillis()));
-                  event
-                      .setLagSeconds(processedTimestamp.getMillis() - paneTimestamp.getMillis() / 1000);
+                  event.setLagSeconds(
+                      (processedTimestamp.getMillis() - paneTimestamp.getMillis()) / 1000);
                   event.setTiming(context.pane().getTiming().toString());
                   event.setValue(context.element().toString());
                   context.output(new Gson().toJson(event));
